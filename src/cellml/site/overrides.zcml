@@ -1,0 +1,18 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser">
+
+    <!-- 
+      setting permission as zope2.View because 
+      Products.CMFEditions.Permissions.AccessPreviousVersions
+      is not interface of zope.security.interfaces.IPermission.
+    -->
+    <browser:page
+        for="*"
+        name="history"
+        class="Products.CMFEditions.browser.diff.DiffView"
+        permission="zope2.View"
+        />
+
+</configure>
+
