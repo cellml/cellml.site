@@ -1,20 +1,32 @@
-This is the standard CellML website buildout.
+Introduction
+============
 
-To test, just do:
-::
+This is the standard buildout configuration for the `CellML Website`_.
 
-    $ python2.4 bootstrap.py
+.. _CellML Website: https://www.cellml.org/
+
+To install, it requires the standard set of system dependencies needed
+for a Zope/Plone installation, namely the C compiler, Python 2.7 header
+files and build related packages.  On a Debian/Ubuntu compatible system
+please install the following packages:
+
+* build-essential
+* libxml2-dev
+* libxslt1-dev
+* python2.7-dev
+
+To test, just do::
+
+    $ python2.7 bootstrap.py
     $ bin/buildout
 
-Start it off by
-::
+Start it off by::
 
     $ bin/zeoserver-testing start
     $ bin/instance-testing start
 
 If you are trying to stage this, please use the appropriate buildout
-configuration file.
-::
+configuration file::
 
     $ bin/buildout -c staging-instance.cfg
 
@@ -27,3 +39,5 @@ http://localhost:13080/VirtualHostBase/http/www.cellml.org:80/cellml/VirtualHost
 For https, this will be the URI:
 
 http://localhost:13080/VirtualHostBase/https/www.cellml.org:443/cellml/VirtualHostRoot/
+
+
