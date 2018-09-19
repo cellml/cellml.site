@@ -11,6 +11,7 @@ files and build related packages.  On a Debian/Ubuntu compatible system
 please install the following packages:
 
 * build-essential
+* zlib1g-dev
 * libxml2-dev
 * libxslt1-dev
 * python2.7-dev
