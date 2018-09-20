@@ -1,0 +1,18 @@
+These OpenRC init scripts may be copied into ``/etc/init.d``.
+
+Define INSTANCE_HOME, DAEMONUSER, DAEMONGROUP in each of the scripts,
+and do the following to add them to default startup:
+
+    # rc-update add cellml.zeoserver default
+    # rc-update add cellml.instance default
+
+Test that the script works by manually start the services:
+
+    # /etc/init.d/cellml.zeoserver start
+    # /etc/init.d/cellml.instance start
+
+Then connect to the site.  To ensure a fully working installation, do a
+full restart and ensure that both these services are online after.
+
+Naturally, if any paths/files have been renamed, the modified values
+should be applied to the scripts accordingly.
